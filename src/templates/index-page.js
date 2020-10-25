@@ -1,51 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
+import { Clock } from "../components/Clock/Clock";
 import BlogRoll from "../modules/BlogRoll";
-import { getDayOfAWeek, getTimeOfADay } from "../utlis/dates";
 
-const Clock = () => {
-  const [clock, setClock] = useState(() => new Date().toLocaleTimeString());
-
-  const titleText = `It's ${getDayOfAWeek[new Date().getDay()]} ${getTimeOfADay(
-    new Date().getHours()
-  )}`.toUpperCase();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setClock(new Date().toLocaleTimeString());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <h1
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-end",
-        color: "white",
-        lineHeight: "1",
-        padding: "0.25em",
-        justifyContent: "center",
-        fontSize: "24px",
-      }}
-    >
-      {titleText}
-      <span
-        style={{
-          display: "flex",
-          fontSize: "12px",
-        }}
-      >
-        {clock}
-      </span>
-    </h1>
-  );
-};
+import "./styles/index-page.scss";
 
 export const IndexPageTemplate = ({
   image,
@@ -58,18 +19,7 @@ export const IndexPageTemplate = ({
 }) => {
   return (
     <div>
-      <div
-        className="full-width-image margin-top-0"
-        style={{
-          // backgroundImage: `url(${
-          //   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          // })`,
-          marginBottom: "0",
-          paddingBottom: 0,
-          backgroundPosition: `top left`,
-          backgroundAttachment: `fixed`,
-        }}
-      >
+      <div className="header-banner">
         <div
           style={{
             display: "flex",
@@ -115,15 +65,15 @@ export const IndexPageTemplate = ({
                   {/*</h3>*/}
                   <BlogRoll />
                 </div>
-                infinity scroll ? infinity icon for infinity scroll how about
-                making switcher between backgrounded gallerylike thing and blog
-                section ??? kinda bad but to consider timer? like a clock with a
-                countdown to next day (ie. 04:20 -> indie rock) in a future ->
-                load on prerender templates content (i.e. pages/about) - maybe
-                host it somewhere and just fetch. Think about first render so we
-                may need metadata on the first fetch locally and just load a
-                skeleton -> then load internet and push content.
-                ⚡🐓️-techno/electronic 🔥🐁-rap 🦩-classic -shoegaze -dream pop
+                {/*infinity scroll ? infinity icon for infinity scroll how about*/}
+                {/*making switcher between backgrounded gallerylike thing and blog*/}
+                {/*section ??? kinda bad but to consider timer? like a clock with a*/}
+                {/*countdown to next day (ie. 04:20 -> indie rock) in a future ->*/}
+                {/*load on prerender templates content (i.e. pages/about) - maybe*/}
+                {/*host it somewhere and just fetch. Think about first render so we*/}
+                {/*may need metadata on the first fetch locally and just load a*/}
+                {/*skeleton -> then load internet and push content.*/}
+                {/*⚡🐓️-techno/electronic 🔥🐁-rap 🦩-classic -shoegaze -dream pop*/}
                 -
               </div>
             </div>

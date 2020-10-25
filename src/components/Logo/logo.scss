@@ -1,0 +1,19 @@
+@import "node_modules/sass-mq/mq";
+
+.logo{
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 9999;
+  @include mq($until: tablet) {
+    .logo--clicked{
+      svg{
+        opacity: 0.2;
+      }
+    }
+  }
+}

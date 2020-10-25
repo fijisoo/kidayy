@@ -1,3 +1,5 @@
+@import "node_modules/sass-mq/mq";
+
 .crossText {
   display: flex;
   align-items: center;
@@ -5,16 +7,18 @@
   font-family: 'Archivo Black', sans-serif;
   font-size: 24px;
   color: #FD461E;
+  @include mq($until: tablet) {
+    visibility: hidden;
+  }
   &:after{
     content: "";
     display: flex;
     position: absolute;
     width: 0;
     left: 0;
-    height: 5px;
+    height: 4px;
     background: #FD461E;
     transition: all 0.3s ease;
-    z-index: -1;
   }
   &:hover:after{
     width: 150%;

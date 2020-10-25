@@ -1,0 +1,26 @@
+@import "node_modules/sass-mq/mq";
+
+.navbarr {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+  .navbar {
+    &-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      @include mq($from: tablet) {
+        max-width: 970px;
+      }
+      .navbar-brand {
+        display: flex;
+        position: relative;
+      }
+      .navbar-item {
+        display: flex;
+        flex-grow: 0;
+      }
+    }
+  }
+}
