@@ -1,0 +1,23 @@
+.crossText {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 24px;
+  color: #FD461E;
+  &:after{
+    content: "";
+    display: flex;
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: 5px;
+    background: #FD461E;
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+  &:hover:after{
+    width: 150%;
+    left: -25%;
+  }
+}

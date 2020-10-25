@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Image from './Image/Image'
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
@@ -14,7 +14,7 @@ const FeatureGrid = ({ gridItems }) => (
                 display: 'inline-block',
               }}
             >
-              <PreviewCompatibleImage imageInfo={item} />
+              <Image imageInfo={item} />
             </div>
           </div>
           <p>{item.text}</p>

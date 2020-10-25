@@ -1,0 +1,102 @@
+@import "node_modules/sass-mq/mq";
+
+$borderRadius: 15px;
+$borderColor: #4b4b4b;
+
+.blog-item {
+  display: inline-block;
+  flex-direction: column;
+  padding: 11px;
+  border: solid 1px $borderColor; //dashed?
+  border-radius: $borderRadius;
+  margin: 10px auto;
+  height: 100%;
+  width: 354px;
+  @include mq($until: desktop) {
+    width: 100%;
+  }
+  &__header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 10px;
+    &-meta {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-end;
+      color: #968e8e;
+      @include mq($until: tablet) {
+        display: none;
+      }
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    &-title {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 25px;
+      color: #e2e2e2;
+    }
+    &-text {
+      display: flex;
+      width: 100%;
+      margin-top: 11px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 13px;
+      color: #968e8e;
+    }
+    &-link {
+      margin-top: 15px;
+    }
+  }
+  &__image,
+  div {
+    width: 170px;
+    height: 100px;
+  }
+}
+
+.articles-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 777px;
+  margin: 0 auto;
+  @include mq($until: desktop) {
+    width: 100%;
+  }
+}
+
+.image-wrapper {
+  display: flex;
+  width: 171px;
+  position: relative;
+  height: 100%;
+  box-shadow: 5px 5px 0px 0px var(--primary);
+  &::before {
+    position: relative;
+    content: "";
+    width: 22px;
+    height: 100px;
+    background: var(--primary);
+  }
+  .gatsby-image-wrapper > img {
+    background-color: var(--primary);
+    background-blend-mode: multiply;
+  }
+}
