@@ -73,10 +73,11 @@ $borderColor: #4b4b4b;
 }
 
 .articles-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 777px;
+  max-width: 747px;
   margin: 0 auto;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
   @include mq($until: desktop) {
     width: 100%;
   }
