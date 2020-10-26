@@ -34,11 +34,16 @@ class BlogRoll extends React.Component {
                 )}
                 <p className="blog-item__header-meta">
                   <span className="">{post.frontmatter.date}</span>
-                  <span className="">~ {post.frontmatter.author || 'HOST'}</span>
+                  <span className="">
+                    ~ {post.frontmatter.author || "HOST"}
+                  </span>
                 </p>
               </header>
               <p className="blog-item__description">
-                <Link className="blog-item__description-title" to={post.fields.slug}>
+                <Link
+                  className="blog-item__description-title"
+                  to={post.fields.slug}
+                >
                   {post.frontmatter.title}
                 </Link>
                 <span className="blog-item__description-text">
@@ -92,6 +97,7 @@ export default () => (
                     }
                   }
                 }
+                tags
               }
             }
           }

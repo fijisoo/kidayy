@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'About about',
+    title: 'About today',
     description:
-      'Space to be filled with chaos',
+      'Space to be a history of chaos',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
