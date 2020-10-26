@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: COKOLWIEK
+title: COKOLWIEK - not featured post
 date: 2020-10-26T23:03:31.350Z
 description: oamwdoamwod
 featuredpost: false
