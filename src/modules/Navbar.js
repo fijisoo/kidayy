@@ -9,11 +9,11 @@ const Navbar = () => {
   return (
     <nav className="navbarr" role="navigation" aria-label="main-navigation">
       <div className="navbar-wrapper">
-        <div className="navbar-item">
-          <Link className="" to="/about">
-            <CrossText text="HOST" />
-          </Link>
-        </div>
+        {/*<div className="navbar-item">*/}
+        {/*  <Link className="" to="/about">*/}
+        {/*    <CrossText text="HOST" />*/}
+        {/*  </Link>*/}
+        {/*</div>*/}
         <div className="navbar-brand">
           <Link
             style={{ width: "100%", justifyContent: "center" }}
@@ -24,11 +24,11 @@ const Navbar = () => {
             <Logo />
           </Link>
         </div>
-        <div className="navbar-item">
-          <a className="" href="" rel="noopener noreferrer">
-            <CrossText text="BASED" />
-          </a>
-        </div>
+        {/*<div className="navbar-item">*/}
+        {/*  <a className="" href="" rel="noopener noreferrer">*/}
+        {/*    <CrossText text="BASED" />*/}
+        {/*  </a>*/}
+        {/*</div>*/}
       </div>
     </nav>
   );

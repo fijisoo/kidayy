@@ -8,6 +8,9 @@
   columns: 2;
   @include mq($until: desktop) {
     width: 100%;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
   }
 }
 

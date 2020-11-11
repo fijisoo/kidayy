@@ -1,5 +1,7 @@
 import React from "react";
 import BlogCard from "../components/BlogCard";
+import ActionBlogCard from "../components/ActionBlogCardWrapper";
+
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
 import "./blog-roll.scss";
@@ -11,7 +13,17 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="articles-wrapper">
-        {posts && posts.map(({ node: post }) => <BlogCard post={post} />)}
+        {posts &&
+          posts.map(({ node: post }) => {
+            return (
+              <ActionBlogCard
+                tags={post?.frontmatter?.tags || []}
+                withDoot={false}
+                withHashTags={false}
+                component={(props) => <BlogCard post={post} {...props} />}
+              />
+            );
+          })}
       </div>
     );
   }
@@ -47,7 +59,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 1200, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
