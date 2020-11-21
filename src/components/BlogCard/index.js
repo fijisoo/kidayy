@@ -5,18 +5,21 @@ import { Button } from "../Button/Button";
 import cn from "classnames";
 
 import "./blog-card.scss";
+import { tagsColors, tagsColorsBlurred } from "../../utlis/tagsColors";
 
-const BlogCard = ({ post, isSocialToggled, mainColor }) => {
+const BlogCard = ({ post, isSocialToggled, mainTag }) => {
+  const mainColorBlurred = tagsColorsBlurred[mainTag];
+  const mainColor = tagsColors[mainTag];
+
   if (!post.excerpt) {
-    console.log("this post ------", post);
     return (
       <article
-          data-mainColor={mainColor}
-        style={{ borderColor: mainColor }}
+        data-mainColor={mainColorBlurred}
+        style={{ borderColor: mainColorBlurred }}
         className={cn("blog-item", {
           "blog-item--featured": post.frontmatter.featuredpost,
           "blog-item--social-toggled": isSocialToggled,
-          [`blog-item--${mainColor}`]: isSocialToggled,
+          [`blog-item--${mainColorBlurred}`]: isSocialToggled,
         })}
       >
         <Image
@@ -30,19 +33,17 @@ const BlogCard = ({ post, isSocialToggled, mainColor }) => {
     );
   }
 
-  console.log("post", post);
-
   return (
     <article
-        style={{ borderColor: mainColor }}
-        className={cn("blog-item", "blog-item--with-content", {
+      style={{ borderColor: mainColorBlurred }}
+      className={cn("blog-item", "blog-item--with-content", {
         "blog-item--social-toggled": isSocialToggled,
         "blog-item--featured": post.frontmatter.featuredpost,
       })}
     >
       <header className="blog-item__header">
         {post.frontmatter.featuredimage && (
-          <div className="image-wrapper">
+          <div className="image-wrapper" style={{ ["--color"]: mainColor }}>
             <Image
               className="blog-item__image"
               imageInfo={{

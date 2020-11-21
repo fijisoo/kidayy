@@ -25,7 +25,7 @@ $borderColor: #4b4b4b;
   border-radius: $borderRadius;
   margin: 10px auto;
   height: 100%;
-  min-width: 330px;
+  min-width: 310px;
   width: 100%;
   z-index: 1;
   @include mq($until: desktop) {

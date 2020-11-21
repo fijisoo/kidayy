@@ -58,7 +58,7 @@ const ActionBlogCard = ({
           )}
           <Component
             isSocialToggled={socialToggled}
-            mainColor={tagsColorsBlurred[tags[0]]}
+            mainTag={tags[0]}
           />
         </div>
         {withDoot && (

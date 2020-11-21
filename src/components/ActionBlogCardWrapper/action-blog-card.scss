@@ -4,6 +4,9 @@
   display: flex;
   height: 100%;
   width: 354px;
+  @include mq($until: desktop) {
+    width: 100%;
+  }
   &__hashtags {
     display: flex;
     width: 100%;
@@ -30,7 +33,7 @@
           top: 25%;
         }
       }
-      &-active-tag{
+      &-active-tag {
         display: flex;
         width: 100%;
         justify-content: flex-end;
@@ -49,10 +52,10 @@
       fill: rgba(255, 255, 255, 0.65);
     }
     &--active {
-      svg, svg:hover {
+      svg,
+      svg:hover {
         fill: white;
       }
-
     }
     &-social {
       display: flex;
@@ -63,4 +66,7 @@
 
 .action-blog-card-block {
   display: inline-block;
+  @include mq($until: desktop) {
+    display: flex;
+  }
 }

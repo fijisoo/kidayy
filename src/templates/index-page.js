@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import axios from "axios";
 
 import Layout from "../components/Layout";
 import { Clock } from "../components/Clock/Clock";
@@ -17,6 +18,8 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
+  axios.get("/.netlify/functions/getCurrentPlayingSong").then(console.log);
+
   return (
     <div>
       <div className="header-banner">

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import LogoSVG from '../../img/globe_icon.svg';
+import KidAYYSVG from '../../img/kidayy-text.svg';
 import pallete from './pallete';
 import {timeout, useHover} from "./helpers";
 import cn from 'classnames';
@@ -38,6 +39,13 @@ const Logo = () => {
             left: '25%',
             width: '50%',
             height: '50%'
+        }}/>
+        <KidAYYSVG style={{
+            display: 'flex',
+            position: 'absolute',
+            top: '72%',
+            transform: 'scale(0.37)',
+            left: '-5px'
         }}/>
         </span>
 };

@@ -18,8 +18,8 @@ class BlogRoll extends React.Component {
             return (
               <ActionBlogCard
                 tags={post?.frontmatter?.tags || []}
-                withDoot={false}
-                withHashTags={false}
+                withDoot={false} // TODO beta
+                withHashTags={false} // TODO beta
                 component={(props) => <BlogCard post={post} {...props} />}
               />
             );
