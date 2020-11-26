@@ -9,6 +9,11 @@ import "./blog-roll.scss";
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props;
+
+    if (!data) {
+      return null;
+    }
+
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
