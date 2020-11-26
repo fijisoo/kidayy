@@ -5,8 +5,10 @@ import Navbar from '../modules/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import {useHover} from "./Logo/helpers";
 
 const TemplateWrapper = ({ children }) => {
+  const [hovered, eventHandlers] = useHover();
   const { title, description } = useSiteMetadata()
   return (
     <div className="layerWrapper">
@@ -48,8 +50,8 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
+      <Navbar useHover={[hovered, eventHandlers]}/>
+      <div>{React.cloneElement(children, {logoHovered: hovered})}</div>
       {/*<Footer />*/}
     </div>
   )

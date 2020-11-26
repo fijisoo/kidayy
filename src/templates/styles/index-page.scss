@@ -1,6 +1,19 @@
+@import "node_modules/sass-mq/mq";
+
 .header-banner {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 400px;
+  @include mq($until: tablet) {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 60px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }

@@ -5,7 +5,7 @@ import CrossText from "../components/CrossText";
 
 import "./navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({useHover}) => {
   return (
     <nav className="navbarr" role="navigation" aria-label="main-navigation">
       <div className="navbar-wrapper">
@@ -21,7 +21,7 @@ const Navbar = () => {
             className="navbar-item"
             title="Logo"
           >
-            <Logo />
+            <Logo useHover={useHover}/>
           </Link>
         </div>
         {/*<div className="navbar-item">*/}

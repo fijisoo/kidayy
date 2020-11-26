@@ -2,10 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import axios from "axios";
+import { isMobile, isTablet } from "react-device-detect";
 
 import Layout from "../components/Layout";
 import { Clock } from "../components/Clock/Clock";
 import BlogRoll from "../modules/BlogRoll";
+import UnderConstruction from "../components/UnderConstruction/UnderConstruction";
 
 import "./styles/index-page.scss";
 
@@ -17,6 +19,7 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  logoHovered,
 }) => {
   axios.get("/.netlify/functions/getCurrentPlayingSong").then(console.log);
 
@@ -40,7 +43,12 @@ export const IndexPageTemplate = ({
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div style={{ display: "flex", flexDirection: "column" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
                 {/*<div className="content">*/}
                 {/*  <div className="tile">*/}
                 {/*    <h1 className="title">{mainpitch.title}</h1>*/}
@@ -66,7 +74,22 @@ export const IndexPageTemplate = ({
                   {/*<h3 className="has-text-weight-semibold is-size-2">*/}
                   {/*  Latest stories*/}
                   {/*</h3>*/}
-                  <BlogRoll />
+                  {/*<BlogRoll />*/}
+                  <UnderConstruction logoHovered={logoHovered} />
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      position: "fixed",
+                      color: "white",
+                      bottom: "30px",
+                      left: 0,
+                      width: "100%",
+                      fontFamily: "Archivo Black",
+                    }}
+                  >
+                    WORK IN PROGRESS
+                  </div>
                 </div>
                 {/*infinity scroll ? infinity icon for infinity scroll how about*/}
                 {/*making switcher between backgrounded gallerylike thing and blog*/}
@@ -77,7 +100,6 @@ export const IndexPageTemplate = ({
                 {/*may need metadata on the first fetch locally and just load a*/}
                 {/*skeleton -> then load internet and push content.*/}
                 {/*⚡🐓️-techno/electronic 🔥🐁-rap 🦩-classic -shoegaze -dream pop*/}
-                -
               </div>
             </div>
           </div>
