@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import LogoSVG from "../../img/globe_icon.svg";
 import KidAYYSVG from "../../img/kidayy-text.svg";
 import pallete from "./pallete";
-import { timeout } from "./helpers";
+import { timeout } from "../../utlis/hooks/hoverHook";
 import cn from "classnames";
 
 import "./logo.scss";

@@ -5,7 +5,7 @@ import Navbar from "../modules/Navbar";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
-import { useHover } from "./Logo/helpers";
+import { useHover } from "../utlis/hooks/hoverHook";
 
 const TemplateWrapper = ({ children }) => {
   const [hovered, eventHandlers] = useHover();
