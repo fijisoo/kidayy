@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { isMobile, isTablet } from "react-device-detect";
+import { DndProvider, useDrag } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 import "./under-construction.scss";
 
 import Char_P from "../../img/patience/letter_P.svg";
@@ -10,10 +11,40 @@ import Char_E from "../../img/patience/letter_E.svg";
 import Char_N from "../../img/patience/letter_N.svg";
 import Char_C from "../../img/patience/letter_C.svg";
 import pallete from "../Logo/pallete";
-import { timeout } from "../Logo/helpers";
+import { timeout } from "../../utlis/hooks/hoverHook";
+import useDeviceDetect from "../../utlis/hooks/deviceDetectionHook";
+
+export const ItemTypes = (index) => ({
+  LETTER: "letter-" + index,
+});
+
+const CharComponentWrapper = ({ index, children }) => {
+  const [{ isDragging }, drag] = useDrag({
+    item: { type: ItemTypes(index).LETTER },
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+  });
+
+  return (
+    <div
+      ref={drag}
+      style={{
+        opacity: isDragging ? 0 : 1,
+        fontSize: 25,
+        position: 'relative',
+        left: "-50px",
+        cursor: "move",
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 const UnderConstruction = ({ logoHovered }) => {
   const [fill, setFill] = useState("white");
+  const { device } = useDeviceDetect();
 
   useEffect(() => {
     let counter = 0;
@@ -47,8 +78,8 @@ const UnderConstruction = ({ logoHovered }) => {
   const scales = {
     desktop: 1,
     tablet: 1,
-    mobile: 0.6
-  }
+    mobile: 0.6,
+  };
 
   const positions = {
     desktop: [
@@ -73,43 +104,38 @@ const UnderConstruction = ({ logoHovered }) => {
     ],
     mobile: [
       { x: -100, y: -140 }, // P
-      { x: -75, y: 30 },// A
-      { x: -55, y: -60 },// T
-      { x: 0, y: 0 },// I
-      { x: 45, y: -30 },// E
-      { x: 85, y: 90 },// N
-      { x: 115, y: -80 },// C
-      { x: 130, y: 10 },// E
+      { x: -75, y: 30 }, // A
+      { x: -55, y: -60 }, // T
+      { x: 0, y: 0 }, // I
+      { x: 45, y: -30 }, // E
+      { x: 85, y: 90 }, // N
+      { x: 115, y: -80 }, // C
+      { x: 130, y: 10 }, // E
     ],
   };
 
-  const handlePosition = (data) => {
-    if (isMobile) {
-      return data.mobile;
-    }
-    if (isTablet) {
-      return data.tablet;
-    }
-    return data.desktop;
-  };
-
   return (
-    <div className="letters-icon__wrapper">
-      {lettersList.map((CharComponent, index) => (
-        <CharComponent
-          key={index}
-          className="letters-icon"
-          fill={fill}
-          style={{
-            display: "flex",
-            transition: `fill ${timeout}ms ease-in`,
-            transform: `translate(${handlePosition(positions)[index].x}px, ${
-              handlePosition(positions)[index].y
-            }px) scale(${handlePosition(scales)})`,
-          }}
-        />
-      ))}
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div className="letters-icon__wrapper">
+        {lettersList.map(
+          (CharComponent, index) =>
+            device && (
+              <CharComponentWrapper index={index}>
+                <CharComponent
+                  key={index}
+                  fill={fill}
+                  className="letters-icon"
+                  style={{
+                    display: "flex",
+                    transition: `fill ${timeout}ms ease-in`,
+                    transform: `translate(${positions[device][index].x}px, ${positions[device][index].y}px) scale(${scales[device]})`,
+                  }}
+                />
+              </CharComponentWrapper>
+            )
+        )}
+      </div>
+    </DndProvider>
   );
 };
 

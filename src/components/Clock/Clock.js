@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getDayOfAWeek, getTimeOfADay } from "../../utlis/dates";
-import { isMobile, isTablet } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 export const Clock = () => {
   const [clock, setClock] = useState(() => new Date().toLocaleTimeString());
@@ -16,7 +16,7 @@ export const Clock = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
+  return !isMobile && (
     <h1
       style={{
         display: "flex",
@@ -27,10 +27,11 @@ export const Clock = () => {
         padding: "0.25em",
         justifyContent: "center",
         fontSize: "24px",
+        marginTop: isMobile ? "160px" : 0,
         top: 0,
       }}
     >
-      {!isMobile ? titleText : null}
+      {titleText}
       <span
         style={{
           display: "flex",
