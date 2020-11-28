@@ -10,6 +10,7 @@ yarn-error.log
 .idea
 
 .env
+.help.md
 
 # Local Netlify folder
 .netlify
