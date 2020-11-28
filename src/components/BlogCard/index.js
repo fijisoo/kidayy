@@ -22,7 +22,7 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
           [`blog-item--${mainColorBlurred}`]: isSocialToggled,
         })}
       >
-        <Button
+        <Image
           className="blog-item__image blog-item__image--full-size"
           imageInfo={{
             image: post.frontmatter.featuredimage,
