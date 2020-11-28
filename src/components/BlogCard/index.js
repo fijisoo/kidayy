@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "../Image/Image";
+import Image from "../Image";
 import { Link } from "gatsby";
-import { Button } from "../Button/Button";
+import { Button } from "../Button";
 import cn from "classnames";
 
 import "./blog-card.scss";
@@ -22,7 +22,7 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
           [`blog-item--${mainColorBlurred}`]: isSocialToggled,
         })}
       >
-        <Image
+        <Button
           className="blog-item__image blog-item__image--full-size"
           imageInfo={{
             image: post.frontmatter.featuredimage,

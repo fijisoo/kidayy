@@ -1,6 +1,6 @@
 import React from "react";
-import BlogCard from "../components/BlogCard";
-import ActionBlogCard from "../components/ActionBlogCardWrapper";
+import BlogCard from "../../components/BlogCard";
+import ActionBlogCard from "../../components/ActionBlogCardWrapper";
 
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";

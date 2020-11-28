@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import Navbar from "../modules/Navbar";
-import "./all.sass";
-import useSiteMetadata from "./SiteMetadata";
+import Footer from "./Footer/Footer";
+import Navbar from "./Navbar";
+import "../templates/styles/all.sass";
+import useSiteMetadata from "../components/SiteMetadata";
 import { withPrefix } from "gatsby";
 import { useHover } from "../utlis/hooks/hoverHook";
 
