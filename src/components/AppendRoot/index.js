@@ -5,7 +5,6 @@ import "./append-root.scss";
 export const AppendRoot = (props) => {
   const el = document.createElement("div");
   el.className = "append-root-el";
-
   useEffect(() => {
     const templateRoot = document.getElementsByClassName("layerWrapper")[0];
     templateRoot.appendChild(el);

@@ -33,9 +33,11 @@ export const IndexPageTemplate = ({ logoHovered }) => {
             height: "100%",
           }}
         >
-          <AppendRoot>
-            <UnderConstruction logoHovered={logoHovered} />
-          </AppendRoot>
+          {typeof window !== 'undefined' && (
+            <AppendRoot>
+              <UnderConstruction logoHovered={logoHovered} />
+            </AppendRoot>
+          )}
         </div>
         <div
           style={{
