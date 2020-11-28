@@ -1,19 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
-)
+export const HTMLContent = ({ content, className }) => {
+  // console.log("htmlContent: ", content, className);
 
-const CmsContent = ({ content, className }) => (
-  <div className={className}>{content}</div>
-)
+  return (
+    <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  );
+};
+
+const CmsContent = ({ content, className }) => {
+  // console.log("CmsContent: ", content, className);
+  return <div className={className}>{content}</div>;
+};
 
 CmsContent.propTypes = {
   content: PropTypes.node,
   className: PropTypes.string,
-}
+};
 
-HTMLContent.propTypes = CmsContent.propTypes
+HTMLContent.propTypes = CmsContent.propTypes;
 
-export default CmsContent
+export default CmsContent;

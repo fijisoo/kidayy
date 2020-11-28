@@ -22,7 +22,7 @@ export const IndexPageTemplate = ({
   intro,
   logoHovered,
 }) => {
-  axios.get("/.netlify/functions/getCurrentPlayingSong").then(console.log);
+  axios.get("/.netlify/functions/getCurrentPlayingSong").then(() => {});
 
   return (
     <div>
