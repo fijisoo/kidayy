@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import Logo from "../components/Logo";
-import CrossText from "../components/CrossText";
+import Logo from "../../components/Logo";
+import CrossText from "../../components/CrossText";
 
 import "./navbar.scss";
 

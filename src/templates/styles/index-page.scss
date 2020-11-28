@@ -2,9 +2,10 @@
 
 .header-banner {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  top: 10%;
   @include mq($until: tablet) {
     display: flex;
     align-items: flex-start;

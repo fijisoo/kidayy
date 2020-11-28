@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Layout from '../modules/Layout'
+import CmsContent, { HTMLContent } from '../components/CmsContent'
 
 export const BlogPostTemplate = ({
   content,
@@ -14,7 +14,7 @@ export const BlogPostTemplate = ({
   title,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || CmsContent
 
   return (
     <section className="section">
