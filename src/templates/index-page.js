@@ -41,82 +41,55 @@ export const IndexPageTemplate = ({
         </div>
       </div>
       <section className="section section--gradient">
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            position: "absolute",
-            height: "100%",
-          }}
-        >
-          <AppendRoot>
-            <UnderConstruction logoHovered={logoHovered} />
-          </AppendRoot>
+          <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                {/*<div className="content">*/}
+                {/*  <div className="tile">*/}
+                {/*    <h1 className="title">{mainpitch.title}</h1>*/}
+                {/*  </div>*/}
+                {/*  <div className="tile">*/}
+                {/*    <h3 className="subtitle">{mainpitch.description}</h3>*/}
+                {/*  </div>*/}
+                {/*  <div className="columns">*/}
+                {/*      <div className="column is-12">*/}
+                {/*          <h3 className="has-text-weight-semibold is-size-2">*/}
+                {/*              {heading}*/}
+                {/*          </h3>*/}
+                {/*          <p>{description}</p>*/}
+                {/*      </div>*/}
+                {/*  </div>*/}
+                {/*</div>*/}
+                <div
+                  style={{
+                    display: "block",
+                    width: "100%",
+                  }}
+                >
+                  {/*<h3 className="has-text-weight-semibold is-size-2">*/}
+                  {/*  Latest stories*/}
+                  {/*</h3>*/}
+                  <BlogRoll />
+                </div>
+                {/*infinity scroll ? infinity icon for infinity scroll how about*/}
+                {/*making switcher between backgrounded gallerylike thing and blog*/}
+                {/*section ??? kinda bad but to consider timer? like a clock with a*/}
+                {/*countdown to next day (ie. 04:20 -> indie rock) in a future ->*/}
+                {/*load on prerender templates content (i.e. pages/about) - maybe*/}
+                {/*host it somewhere and just fetch. Think about first render so we*/}
+                {/*may need metadata on the first fetch locally and just load a*/}
+                {/*skeleton -> then load internet and push content.*/}
+                {/*⚡🐓️-techno/electronic 🔥🐁-rap 🦩-classic -shoegaze -dream pop*/}
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            position: "fixed",
-            color: "white",
-            bottom: "30px",
-            left: 0,
-            width: "100%",
-            fontFamily: "Archivo Black",
-          }}
-        >
-          WORK IN PROGRESS
-        </div>
-        {/*  <div className="container">*/}
-        {/*  <div className="columns">*/}
-        {/*    <div className="column is-10 is-offset-1">*/}
-        {/*      <div*/}
-        {/*        style={{*/}
-        {/*          display: "flex",*/}
-        {/*          flexDirection: "column",*/}
-        {/*        }}*/}
-        {/*      >*/}
-        {/*        /!*<div className="content">*!/*/}
-        {/*        /!*  <div className="tile">*!/*/}
-        {/*        /!*    <h1 className="title">{mainpitch.title}</h1>*!/*/}
-        {/*        /!*  </div>*!/*/}
-        {/*        /!*  <div className="tile">*!/*/}
-        {/*        /!*    <h3 className="subtitle">{mainpitch.description}</h3>*!/*/}
-        {/*        /!*  </div>*!/*/}
-        {/*        /!*  <div className="columns">*!/*/}
-        {/*        /!*      <div className="column is-12">*!/*/}
-        {/*        /!*          <h3 className="has-text-weight-semibold is-size-2">*!/*/}
-        {/*        /!*              {heading}*!/*/}
-        {/*        /!*          </h3>*!/*/}
-        {/*        /!*          <p>{description}</p>*!/*/}
-        {/*        /!*      </div>*!/*/}
-        {/*        /!*  </div>*!/*/}
-        {/*        /!*</div>*!/*/}
-        {/*        <div*/}
-        {/*          style={{*/}
-        {/*            display: "block",*/}
-        {/*            width: "100%",*/}
-        {/*          }}*/}
-        {/*        >*/}
-        {/*          /!*<h3 className="has-text-weight-semibold is-size-2">*!/*/}
-        {/*          /!*  Latest stories*!/*/}
-        {/*          /!*</h3>*!/*/}
-        {/*          <BlogRoll />*/}
-        {/*        </div>*/}
-        {/*        /!*infinity scroll ? infinity icon for infinity scroll how about*!/*/}
-        {/*        /!*making switcher between backgrounded gallerylike thing and blog*!/*/}
-        {/*        /!*section ??? kinda bad but to consider timer? like a clock with a*!/*/}
-        {/*        /!*countdown to next day (ie. 04:20 -> indie rock) in a future ->*!/*/}
-        {/*        /!*load on prerender templates content (i.e. pages/about) - maybe*!/*/}
-        {/*        /!*host it somewhere and just fetch. Think about first render so we*!/*/}
-        {/*        /!*may need metadata on the first fetch locally and just load a*!/*/}
-        {/*        /!*skeleton -> then load internet and push content.*!/*/}
-        {/*        /!*⚡🐓️-techno/electronic 🔥🐁-rap 🦩-classic -shoegaze -dream pop*!/*/}
-        {/*      </div>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
       </section>
     </div>
   );
