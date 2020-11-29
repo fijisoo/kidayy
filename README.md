@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0e5cd07d-d731-4d35-8518-727f2b4d2d61/deploy-status)](https://app.netlify.com/sites/kidayy/deploys)
 
-**KIDAYY**
+**KIDAYY - BLOG**
 
 This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
 
