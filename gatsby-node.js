@@ -39,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${
-            process.env.DEPLOY_ENV === "UNDER_CONSTRUCTION"
+            process.env.DEPLOY_BLOG_ENV === "UNDER_CONSTRUCTION"
               ? "under-construction"
               : String(edge.node.frontmatter.templateKey)
           }.js`
@@ -71,7 +71,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: tagPath,
         component: path.resolve(
           `src/templates/${
-            process.env.DEPLOY_ENV === "UNDER_CONSTRUCTION"
+            process.env.DEPLOY_BLOG_ENV === "UNDER_CONSTRUCTION"
               ? "under-construction"
               : "tags"
           }.js`
