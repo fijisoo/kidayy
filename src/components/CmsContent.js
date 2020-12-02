@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const HTMLContent = ({ content, className }) => {
-  // console.log("htmlContent: ", content, className);
+  console.log("htmlContent: ", content);
 
   return (
     <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
@@ -10,7 +10,7 @@ export const HTMLContent = ({ content, className }) => {
 };
 
 const CmsContent = ({ content, className }) => {
-  // console.log("CmsContent: ", content, className);
+  console.log("CmsContent: ", content, className);
   return <div className={className}>{content}</div>;
 };
 

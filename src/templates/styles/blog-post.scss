@@ -1,0 +1,55 @@
+@import "node_modules/sass-mq/mq";
+
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  &-wrapper {
+    display: flex;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    flex-shrink: 1;
+    @include mq($until: tablet) {
+      width: 100%;
+      padding: 0 20px;
+    }
+    &-header {
+      display: flex;
+      color: #e2e2e2;
+      font-size: 36px;
+      font-family: Roboto;
+    }
+    &-description {
+      margin: 10px 0;
+      padding: 0;
+      display: flex;
+      font-style: italic;
+      color: var(--primary);
+      opacity: 0.5;
+    }
+    &-cms {
+      font-size: 18px;
+      color: #968e8e;
+      img {
+        display: flex;
+        margin: 60px auto;
+        max-height: 460px;
+      }
+    }
+    &-tags {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+      &-contener {
+        display: flex;
+        &-item {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
