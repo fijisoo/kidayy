@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({ logoHovered }) => {
             height: "100%",
           }}
         >
-          {typeof window !== 'undefined' && (
+          {typeof window !== "undefined" && (
             <AppendRoot>
               <UnderConstruction logoHovered={logoHovered} />
             </AppendRoot>
@@ -49,6 +49,7 @@ export const IndexPageTemplate = ({ logoHovered }) => {
             left: 0,
             width: "100%",
             fontFamily: "Archivo Black",
+            filter: "blur(0.5px)",
           }}
         >
           WORK IN PROGRESS

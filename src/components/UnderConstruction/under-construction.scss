@@ -4,6 +4,8 @@
   display: flex;
   margin: 15px;
   position: absolute;
+  filter: blur(2px);
+  padding: 6px;
   @include mq($until: tablet) {
     transform: scale(0.5);
   }
