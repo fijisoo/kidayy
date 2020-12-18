@@ -76,8 +76,8 @@ const UnderConstruction = ({ logoHovered }) => {
   ];
 
   const scales = {
-    desktop: 1.5,
-    tablet: 1,
+    desktop: 1,
+    tablet: 0.8,
     mobile: 0.6,
   };
 
