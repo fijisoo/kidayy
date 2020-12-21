@@ -3,13 +3,15 @@ import axios from "axios";
 
 import Layout from "../modules/Layout";
 import { Clock } from "../components/Clock";
+import TrunCatSVG from "../img/truncat.svg";
 
 import "./styles/index-page.scss";
+import {Host} from "../modules/Host/Host";
 
 export const IndexPageTemplate = ({
   logoHovered,
 }) => {
-  axios.get("/.netlify/functions/getCurrentPlayingSong").then(() => {});
+  // axios.get("/.netlify/functions/getCurrentPlayingSong").then(() => {});
 
   return (
     <div>
@@ -36,8 +38,9 @@ export const IndexPageTemplate = ({
                   display: "flex",
                   flexDirection: "column",
                 }}
+
               >
-               TEST
+               <Host />
               </div>
             </div>
           </div>
