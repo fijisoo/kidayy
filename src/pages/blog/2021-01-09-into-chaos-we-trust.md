@@ -5,6 +5,7 @@ date: 2021-01-09T11:58:29.156Z
 description: Uhmm so basicly, hai, this is first post, I don't know much about
   it, I just want to share some ____
 featuredpost: true
+featuredimage: /img/apple-touch-icon.png
 tags:
   - greetings
   - ayy
