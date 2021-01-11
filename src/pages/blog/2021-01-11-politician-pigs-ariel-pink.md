@@ -10,7 +10,7 @@ tags:
   - art
   - ArielPinkDidNothingWrong
 ---
-Donald Trump is banished on most popular Social Media services, pandemic still reaps the harvest and Ariel Pink had just removed from contracted label because of attending Capitol Protest. Welcome in 2021! And from all those three Ariel Pink took most of my attention..
+Donald Trump is banished on most popular Social Media services, pandemic still reaps the harvest and Ariel Pink had just removed from contracted label because of attending Capitol Protest. Welcome in 2021! Let me take a look at Ariels Pink situation because that one touched me the most.
 
 This is something dangerous in valuate Music and in general Art through the prism of artists life/decisions/thoughts. Music was always a part of expressing ourself in some way untouchable. Art helps us finding each other without looking at differences, where we could always search for beauty and humanity. But sadly some people found there place to seed suspicions, fear and indifference just to acquiring own needs. 
 
