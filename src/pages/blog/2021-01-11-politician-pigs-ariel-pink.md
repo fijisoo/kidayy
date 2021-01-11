@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Politician pigs / Ariel Pink
+title: Politicians pigs / Ariel Pink
 date: 2021-01-11T19:01:23.479Z
 description: Holy f**k this thing calls itself an artist?
 featuredpost: true
