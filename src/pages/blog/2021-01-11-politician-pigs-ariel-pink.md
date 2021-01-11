@@ -1,0 +1,29 @@
+---
+templateKey: blog-post
+title: Politician pigs / Ariel Pink
+date: 2021-01-11T19:01:23.479Z
+description: Holy f**k this thing calls itself an artist?
+featuredpost: true
+featuredimage: /img/ariel-pink-1.jpg
+tags:
+  - "#politics #art #ArielPinkDidNothingWrong"
+---
+Donald Trump is banished on most popular Social Media services, pandemic still reaps the harvest and Ariel Pink had just removed from contracted label because of attending Capitol Protest. Welcome in 2021! But I would like to write a little more about Ariel Pink situation.
+
+This is something dangerous in valuate Music and in general Art through the prism of artists life/decisions/thoughts. Music was always a part of expressing ourself in some way untouchable. Art helps us finding each other without looking at differences, where we could always search for beauty and humanity. But sadly some people found there place to seed suspicions, fear and indifference just to acquiring own needs. 
+
+![Ariel Pink - Another Weekend](/img/ss1.png "SS1")
+
+![Ariel Pink - Another Weekend](/img/ss2.png "SS2")
+
+![Ariel Pink - Another Weekend](/img/ss4.png "SS3")
+
+![Ariel Pink - Another Weekend](/img/ss5.png "SS4")
+
+There is no place in my heart which may try to look at beauty other way that it appears. Don't hide your sensitivity for life, experiencing and finding other people close to you. And let music expose all that what's close to your heart. 
+
+
+
+[I used to dream](https://www.youtube.com/watch?v=YXKLqVCz8SA)
+
+Be blessed
