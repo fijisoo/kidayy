@@ -24,7 +24,7 @@ This is something dangerous in valuate Music and in general Art through the pris
 
 ![twitter #ArielPink](/img/sst1.png "SS5")
 
-There is no place in my heart which may try to look at beauty other way that it appears. Don't hide your sensitivity for life, experiencing and finding people close to you. And let music expose all of that what's close to your heart. 
+There is no place in my heart which may try to look at beauty other way that it appears. Don't hide your sensitivity for life, experiencing and finding people close your boundaries. And let music expose all of that what's close your heart. 
 
 [I used to dream](https://www.youtube.com/watch?v=YXKLqVCz8SA)!
 
