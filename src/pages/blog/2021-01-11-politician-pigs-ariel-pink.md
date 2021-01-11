@@ -6,7 +6,9 @@ description: Holy f**k this thing calls itself an artist?
 featuredpost: true
 featuredimage: /img/ariel-pink-1.jpg
 tags:
-  - "#politics #art #ArielPinkDidNothingWrong"
+  - politics
+  - art
+  - ArielPinkDidNothingWrong
 ---
 Donald Trump is banished on most popular Social Media services, pandemic still reaps the harvest and Ariel Pink had just removed from contracted label because of attending Capitol Protest. Welcome in 2021! But I would like to write a little more about Ariel Pink situation.
 
