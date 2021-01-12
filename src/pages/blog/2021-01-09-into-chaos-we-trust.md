@@ -12,6 +12,6 @@ tags:
 ---
 So, we're here. You reading this, me writing some shit. I have nothing much to say you about. Maybe just music I'd like to share. Maybe shitty philosophical ups and downs. Daily bread. But well, at least I'd like to give some heart to selection. 
 
-I'm based in Poland but I love people around the world so I decided to write in more generic language. 
+I'm based in Poland but I love people around the world so I decided to write in a more generic language. 
 
 Hope you all well. Hope we can meet each other later.
