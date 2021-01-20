@@ -21,4 +21,4 @@ Best track on the new album: 6/1 with transition to the next one.
 
 [Here's also stream from personalized copy signing event. They also laughed at my `joke` about ](https://youtu.be/FHmZAGE0xjk?t=28153)*["Josh looks like he's doin' maths or smth." (7:49:13)](https://youtu.be/FHmZAGE0xjk?t=28153)* 
 
-Thanks Shame, you made me huge smile too!
+Thanks Shame, you made me a huge smile too!
