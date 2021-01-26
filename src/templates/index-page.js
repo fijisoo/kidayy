@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import { Clock } from "../components/Clock";
 import BlogRoll from "../modules/BlogRoll";
 import Layout from '../modules/Layout'
@@ -7,8 +6,6 @@ import Layout from '../modules/Layout'
 import "./styles/index-page.scss";
 
 export const IndexPageTemplate = () => {
-  axios.get("/.netlify/functions/getCurrentPlayingSong").then(() => {});
-
   return (
     <div>
       <div className="header-banner">

@@ -19,7 +19,20 @@
   width: 171px;
   position: relative;
   height: 100%;
-  box-shadow: 5px 5px 0px 0px var(--primary);
+  left: 0;
+  top: 0;
+  box-shadow:
+          1px 1px 0 var(--primary),
+          2px 2px 0 var(--primary),
+          3px 3px 0 var(--primary),
+          4px 4px 0 var(--primary),
+          5px 5px 0 var(--primary);
+  transition: box-shadow 0.25s ease-in-out, left 0.2s ease-in-out, top 0.2s ease-in-out;
+  &:hover {
+    left: 3px;
+    top: 3px;
+    box-shadow: 0 0 0 var(--primary);
+  }
   &::before {
     position: relative;
     content: "";

@@ -11,6 +11,8 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
   const mainColorBlurred = tagsColorsBlurred[mainTag];
   const mainColor = tagsColors[mainTag];
 
+  const linkAddr = post.fields.slug.replace("/blog", "");
+
   if (!post.excerpt) {
     return (
       <article
@@ -59,13 +61,13 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
         </p>
       </header>
       <p className="blog-item__description">
-        <Link className="blog-item__description-title" to={post.fields.slug}>
+        <Link className="blog-item__description-title" to={linkAddr}>
           {post.frontmatter.title}
         </Link>
         <span className="blog-item__description-text">{post.excerpt}</span>
         <Button
           className="blog-item__description-link"
-          link={post.fields.slug}
+          link={linkAddr}
           text="ENTRANCE"
         />
       </p>
