@@ -64,6 +64,9 @@ $borderColor: #4b4b4b;
     justify-content: flex-end;
     flex-wrap: wrap;
     margin-top: 30px;
+    &--only-title{
+      margin: 15px 0 10px;
+    }
     &-title {
       display: flex;
       width: 100%;

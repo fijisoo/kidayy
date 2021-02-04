@@ -13,6 +13,26 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
 
   const linkAddr = post.fields.slug.replace("/blog", "");
 
+  console.log("post", post);
+
+  if (!post.frontmatter.featuredimage && !post.excerpt) {
+      const mainColorBlurredTitleBackground = tagsColorsBlurred['angery'];
+    return (
+      <article
+        style={{ borderColor: mainColorBlurred || mainColorBlurredTitleBackground }}
+        className={cn("blog-item", "blog-item-only-title", {
+          "blog-item--social-toggled": isSocialToggled,
+        })}
+      >
+        <p className="blog-item__description blog-item__description--only-title">
+          <span className="blog-item__description-title">
+            {post.frontmatter.title}
+          </span>
+        </p>
+      </article>
+    );
+  }
+
   if (!post.excerpt) {
     return (
       <article
@@ -34,6 +54,12 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
       </article>
     );
   }
+
+  console.log(
+    "!post.frontmatter.featuredimage",
+    !post.frontmatter.featuredimage,
+    !post.excerpt
+  );
 
   return (
     <article
