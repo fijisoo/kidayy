@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import cn from "classnames";
 
 import "./blog-card.scss";
@@ -11,6 +11,11 @@ const FBPost = ({
   isSocialToggled,
   post,
 }) => {
+  useEffect(() => {
+    if (window.FB) {
+      window.FB.XFBML.parse();
+    }
+  }, []);
   const mainColorBlurred = tagsColorsBlurred[mainTag];
   const mainColorBlurredTitleBackground = tagsColorsBlurred["angery"];
   return (

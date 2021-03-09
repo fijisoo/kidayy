@@ -54,7 +54,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Helmet titleTemplate="%s | Blog">
-          <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"/>
+          <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"/>
       </Helmet>
       <IndexPageTemplate />
     </Layout>
