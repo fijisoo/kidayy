@@ -5,6 +5,7 @@ import ActionBlogCard from "../../components/ActionBlogCardWrapper";
 import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
 import "./blog-roll.scss";
+import FBPost from "../../components/BlogCard/fb-post";
 
 class BlogRoll extends React.Component {
   render() {
@@ -25,7 +26,16 @@ class BlogRoll extends React.Component {
                 tags={post?.frontmatter?.tags || []}
                 withDoot={false} // TODO beta
                 withHashTags={false} // TODO beta
-                component={(props) => <BlogCard post={post} {...props} />}
+                component={(props) => {
+                  return post?.frontmatter?.tags.includes("facebook") ? (
+                    <FBPost
+                      post={post}
+                      {...props}
+                    />
+                  ) : (
+                    <BlogCard post={post} {...props} />
+                  );
+                }}
               />
             );
           })}

@@ -13,8 +13,6 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
 
   const linkAddr = post.fields.slug.replace("/blog", "");
 
-  console.log("post", post);
-
   if (!post.frontmatter.featuredimage && !post.excerpt) {
       const mainColorBlurredTitleBackground = tagsColorsBlurred['angery'];
     return (
@@ -54,12 +52,6 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
       </article>
     );
   }
-
-  console.log(
-    "!post.frontmatter.featuredimage",
-    !post.frontmatter.featuredimage,
-    !post.excerpt
-  );
 
   return (
     <article

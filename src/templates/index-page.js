@@ -1,9 +1,10 @@
 import React from "react";
 import { Clock } from "../components/Clock";
 import BlogRoll from "../modules/BlogRoll";
-import Layout from '../modules/Layout'
+import Layout from "../modules/Layout";
 
 import "./styles/index-page.scss";
+import { Helmet } from "react-helmet";
 
 export const IndexPageTemplate = () => {
   return (
@@ -50,10 +51,12 @@ export const IndexPageTemplate = () => {
 };
 
 const IndexPage = () => {
-
   return (
     <Layout>
-      <IndexPageTemplate/>
+      <Helmet titleTemplate="%s | Blog">
+          <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"/>
+      </Helmet>
+      <IndexPageTemplate />
     </Layout>
   );
 };

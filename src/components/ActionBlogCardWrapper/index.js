@@ -6,6 +6,7 @@ import { navigate } from "gatsby";
 import { tagsColors, tagsColorsBlurred } from "../../utlis/tagsColors";
 
 import "./action-blog-card.scss";
+import FBPost from "../BlogCard/fb-post";
 
 const ActionBlogCard = ({
   component: Component,
