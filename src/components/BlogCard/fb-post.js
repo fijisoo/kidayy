@@ -26,7 +26,7 @@ const FBPost = ({
     >
       <div
         className="fb-video"
-        data-href={post.excerpt}
+        data-href={post.frontmatter.description}
         data-width={width}
         data-show-text={dataShowText}
       />
