@@ -17,3 +17,29 @@
     bottom: 0;
   }
 }
+
+@keyframes blurAnimation {
+  0% {
+    filter: blur(0);
+  }
+
+  10% {
+    filter: blur(0);
+  }
+
+  to {
+    filter: blur(150px);
+  }
+}
+
+.noFuckingTimeForThat {
+  display: flex;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  z-index: 0;
+  color: white;
+  font-size: 120px;
+  filter: blur(150px);
+  animation: blurAnimation 30s;
+}
