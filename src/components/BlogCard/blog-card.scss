@@ -15,6 +15,10 @@ $borderColor: #4b4b4b;
   }
 }
 
+.react-card-flip {
+  margin-bottom: 20px;
+}
+
 .blog-item {
   display: flex;
   flex-grow: 1;
@@ -23,7 +27,8 @@ $borderColor: #4b4b4b;
   padding: 11px;
   border: solid 1px $borderColor; //dashed?
   border-radius: $borderRadius;
-  margin: 10px auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
   height: 100%;
   min-width: 310px;
   width: 100%;
@@ -31,8 +36,12 @@ $borderColor: #4b4b4b;
   @include mq($until: desktop) {
     width: 100%;
   }
-  &--social-toggled{
+  &--social-toggled {
     animation: dootAnimation 0.9s linear;
+  }
+  &--flipped {
+    justify-content: space-between;
+    margin-bottom: 0;
   }
   &__header {
     display: inline-flex;
@@ -64,7 +73,7 @@ $borderColor: #4b4b4b;
     justify-content: flex-end;
     flex-wrap: wrap;
     margin-top: 30px;
-    &--only-title{
+    &--only-title {
       margin: 15px 0 10px;
     }
     &-title {

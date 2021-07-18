@@ -1,0 +1,34 @@
+$buttonFontSize: 13px;
+$background: var(--grey);
+$borderRadius: 11px;
+
+.buttonWithLeftArrow {
+  display: inline-flex;
+  &:hover > .buttonLeftArrow {
+    right: -18px;
+  }
+  @media (hover: none) and (pointer: coarse) {
+    right: -18px;
+  }
+}
+
+.buttonLeftArrow {
+  display: flex;
+  position: relative;
+  height: 33px;
+  right: -40px;
+  background: $background;
+  font-size: $buttonFontSize;
+  border-radius: $borderRadius;
+  align-items: center;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  transition: right 0.2s ease-out;
+  & > svg {
+    transform: rotate(90deg);
+    fill: white;
+  }
+}

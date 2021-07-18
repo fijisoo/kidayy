@@ -1,56 +1,6 @@
-import React from "react";
-import BlogCard from "../../components/BlogCard";
-import ActionBlogCard from "../../components/ActionBlogCardWrapper";
-
-import PropTypes from "prop-types";
 import { graphql, StaticQuery } from "gatsby";
-import "./blog-roll.scss";
-import FBPost from "../../components/BlogCard/fb-post";
-
-class BlogRoll extends React.Component {
-  render() {
-    const { data } = this.props;
-
-    if (!data) {
-      return null;
-    }
-
-    const { edges: posts } = data.allMarkdownRemark;
-
-    return (
-      <div className="articles-wrapper">
-        {posts &&
-          posts.map(({ node: post }) => {
-            return (
-              <ActionBlogCard
-                tags={post?.frontmatter?.tags || []}
-                withDoot={false} // TODO beta
-                withHashTags={false} // TODO beta
-                component={(props) => {
-                  return post?.frontmatter?.tags.includes("facebook") ? (
-                    <FBPost
-                      post={post}
-                      {...props}
-                    />
-                  ) : (
-                    <BlogCard post={post} {...props} />
-                  );
-                }}
-              />
-            );
-          })}
-      </div>
-    );
-  }
-}
-
-BlogRoll.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-};
+import React from "react";
+import { BlogRollComponent } from "./BlogRollComponent";
 
 export default () => (
   <StaticQuery
@@ -72,6 +22,7 @@ export default () => (
                 description
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
+                externalVideo
                 featuredpost
                 featuredimage {
                   childImageSharp {
@@ -87,6 +38,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogRollComponent data={data} count={count} />}
   />
 );

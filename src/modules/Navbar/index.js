@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "gatsby";
 import Logo from "../../components/Logo";
 import CrossText from "../../components/CrossText";
 
 import "./navbar.scss";
 
-const Navbar = ({useHover}) => {
+const Navbar = memo(({ useHover }) => {
   return (
     <nav className="navbarr" role="navigation" aria-label="main-navigation">
       <div className="navbar-wrapper">
@@ -21,7 +21,7 @@ const Navbar = ({useHover}) => {
             className="navbar-item"
             title="Logo"
           >
-            <Logo useHover={useHover}/>
+            <Logo useHover={useHover} />
           </Link>
         </div>
         {/*<div className="navbar-item">*/}
@@ -32,6 +32,6 @@ const Navbar = ({useHover}) => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navbar;

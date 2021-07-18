@@ -5,6 +5,7 @@ date: 2021-01-20T00:35:39.695Z
 description: "You're bored of the daily bread and hungry for life so you doing
   things to just feel better, but then someone says - you're not a good person
   at all... "
+externalVideo: "7Z2-KQd7AZ8"
 featuredpost: true
 featuredimage: /img/shame.jpg
 tags:

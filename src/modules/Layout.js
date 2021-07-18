@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "./Footer/Footer";
 import Navbar from "./Navbar";
 import "../templates/styles/all.sass";
 import useSiteMetadata from "../components/SiteMetadata";
@@ -56,7 +55,6 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar useHover={[hovered, eventHandlers]} />
       <div>{childrenWithProps}</div>
-      {/*<Footer />*/}
     </div>
   );
 };
