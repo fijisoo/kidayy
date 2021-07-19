@@ -122,16 +122,21 @@ const BlogCard = ({ post, isSocialToggled, mainTag }) => {
         minHeight: articleHeight,
         transition: "all 0.2s",
       }}
-      cardStyles={{back: {marginBottom: '1px'}}}
+      cardStyles={{ back: { marginBottom: "1px" } }}
       isFlipped={isCardFlipped}
       flipDirection="vertical"
     >
       <article
         style={{ borderColor: mainColorBlurred }}
-        className={cn("blog-item", "blog-item--with-content", "blog-item--flipped", {
-          "blog-item--social-toggled": isSocialToggled,
-          "blog-item--featured": post.frontmatter.featuredpost,
-        })}
+        className={cn(
+          "blog-item",
+          "blog-item--with-content",
+          "blog-item--flipped",
+          {
+            "blog-item--social-toggled": isSocialToggled,
+            "blog-item--featured": post.frontmatter.featuredpost,
+          }
+        )}
         ref={articleRef}
       >
         <header className="blog-item__header">
